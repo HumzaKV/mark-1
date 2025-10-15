@@ -235,4 +235,4 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Wait for section and enhance
-waitForElement('section.bg-white.spacer-p-t-l', enhanceProductSection);
+waitForElement('section.bg-white.spacer-p-t-l', enhanceProductSection); 
