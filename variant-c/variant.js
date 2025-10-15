@@ -67,34 +67,34 @@ function EnhancedProductCard({ icon, category, title, description, href, index }
 // Enhanced Section Header Component
 function SectionHeader() {
   return (
-    <div className="cf:mx-auto cf:max-w-3xl cf:text-center cf:mb-16">
-      <div className="cf:inline-flex cf:items-center cf:gap-2 cf:px-4 cf:py-2 cf:rounded-full cf:bg-[#f6fab2] cf:mb-6 cf:animate-[fadeIn_0.6s_ease-out]">
-        <span className="cf:text-sm cf:font-medium cf:text-[#010518] cf:uppercase cf:tracking-wide">
+    <div className="cf:mx-auto cf:max-w-3xl cf:text-center cf:mb-12 cf:md:mb-16">
+      <div className="cf:inline-flex cf:items-center cf:gap-2 cf:px-4 cf:py-2 cf:rounded-full cf:bg-[#f6fab2] cf:mb-4 cf:md:mb-6 cf:animate-[fadeIn_0.6s_ease-out]">
+        <span className="cf:text-xs cf:md:text-sm cf:font-medium cf:text-[#010518] cf:uppercase cf:tracking-wide">
           Ramp Product Suite
         </span>
       </div>
       
-      <h2 className="cf:text-5xl cf:font-normal cf:text-[#010518] cf:mb-6 cf:leading-tight cf:animate-[fadeIn_0.8s_ease-out]">
+      <h2 className="cf:text-3xl cf:md:text-4xl cf:lg:text-5xl cf:font-normal cf:text-[#010518] cf:mb-4 cf:md:mb-6 cf:leading-tight cf:animate-[fadeIn_0.8s_ease-out] cf:px-4">
         Get to know Ramp
       </h2>
       
-      <p className="cf:text-xl cf:text-[#666] cf:leading-relaxed cf:max-w-2xl cf:mx-auto cf:animate-[fadeIn_1s_ease-out]">
+      <p className="cf:text-base cf:md:text-lg cf:lg:text-xl cf:text-[#666] cf:leading-relaxed cf:max-w-2xl cf:mx-auto cf:animate-[fadeIn_1s_ease-out] cf:px-4">
         Replace multiple broken tools with Ramp, the only platform designed to make your finance team faster—and happier.
       </p>
       
-      {/* Decorative elements */}
-      <div className="cf:flex cf:items-center cf:justify-center cf:gap-8 cf:mt-10">
+      {/* Decorative elements - hidden on mobile, visible on tablet+ */}
+      <div className="cf:hidden cf:md:flex cf:items-center cf:justify-center cf:flex-wrap cf:gap-4 cf:md:gap-6 cf:lg:gap-8 cf:mt-8 cf:md:mt-10">
         <div className="cf:flex cf:items-center cf:gap-2">
           <div className="cf:size-2 cf:rounded-full cf:bg-[#f6fab2]"></div>
-          <span className="cf:text-sm cf:text-[#666]">All-in-one platform</span>
+          <span className="cf:text-xs cf:md:text-sm cf:text-[#666] cf:whitespace-nowrap">All-in-one platform</span>
         </div>
         <div className="cf:flex cf:items-center cf:gap-2">
           <div className="cf:size-2 cf:rounded-full cf:bg-[#f6fab2]"></div>
-          <span className="cf:text-sm cf:text-[#666]">Easy integration</span>
+          <span className="cf:text-xs cf:md:text-sm cf:text-[#666] cf:whitespace-nowrap">Easy integration</span>
         </div>
         <div className="cf:flex cf:items-center cf:gap-2">
           <div className="cf:size-2 cf:rounded-full cf:bg-[#f6fab2]"></div>
-          <span className="cf:text-sm cf:text-[#666]">Save time & money</span>
+          <span className="cf:text-xs cf:md:text-sm cf:text-[#666] cf:whitespace-nowrap">Save time & money</span>
         </div>
       </div>
     </div>
@@ -178,24 +178,24 @@ function enhanceProductSection() {
       {/* Background gradient */}
       <div className="cf:absolute cf:inset-0 cf:bg-gradient-to-b cf:from-white cf:via-[#fafafa] cf:to-white cf:pointer-events-none"></div>
       
-      <div className="cf:relative cf:mx-auto cf:w-full cf:max-w-screen-2xl cf:px-4 cf:md:px-8 cf:lg:px-12 cf:xl:px-16 cf:py-20">
+      <div className="cf:relative cf:mx-auto cf:w-full cf:max-w-screen-2xl cf:px-4 cf:md:px-8 cf:lg:px-12 cf:xl:px-16 cf:py-12 cf:md:py-16 cf:lg:py-20">
         <SectionHeader />
         
         {/* Products Grid */}
-        <div className="cf:grid cf:grid-cols-1 cf:md:grid-cols-2 cf:lg:grid-cols-4 cf:gap-6 cf:animate-[fadeIn_1.2s_ease-out]">
+        <div className="cf:grid cf:grid-cols-1 cf:md:grid-cols-2 cf:lg:grid-cols-4 cf:gap-4 cf:md:gap-6 cf:animate-[fadeIn_1.2s_ease-out]">
           {products.map((product, index) => (
             <EnhancedProductCard key={index} {...product} index={index} />
           ))}
         </div>
         
         {/* CTA Section */}
-        <div className="cf:mt-16 cf:text-center cf:animate-[fadeIn_1.4s_ease-out]">
+        <div className="cf:mt-12 cf:md:mt-16 cf:text-center cf:animate-[fadeIn_1.4s_ease-out] cf:px-4">
           <a 
             href="/see-a-demo"
-            className="cf:inline-flex cf:items-center cf:gap-2 cf:px-8 cf:py-4 cf:rounded-xl cf:bg-[#010518] cf:text-white cf:font-medium cf:transition-all cf:duration-300 cf:hover:bg-[#1a1f3a] cf:hover:scale-105 cf:hover:shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
+            className="cf:inline-flex cf:items-center cf:gap-2 cf:px-6 cf:md:px-8 cf:py-3 cf:md:py-4 cf:rounded-xl cf:bg-[#010518] cf:text-white cf:text-sm cf:md:text-base cf:font-medium cf:transition-all cf:duration-300 cf:hover:bg-[#1a1f3a] cf:hover:scale-105 cf:hover:shadow-[0_10px_40px_rgba(0,0,0,0.2)]"
           >
             See Ramp in action
-            <svg className="cf:size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="cf:size-4 cf:md:size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
